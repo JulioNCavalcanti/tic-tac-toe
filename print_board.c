@@ -8,7 +8,7 @@ void print_board()
 
     char(*board)[76] = get_board();
 
-    for (int i = 0; i < 13; i++)
+    for (int i = 0; i < 14; i++)
     {
         for (int j = 0; j < 76; j++)
         {
