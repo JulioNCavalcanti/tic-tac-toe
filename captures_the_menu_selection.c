@@ -23,9 +23,9 @@ void captures_the_menu_selection()
         if (choice != 1 && choice != 2 && choice != 3 && choice != 4)
         {
             printf("\n");
-            printf("%s ----------------------------------------------------- %s\n", RED, RESET);
-            printf("%s| This option does not exist! Enter a valid position. |%s\n", RED, RESET);
-            printf("%s ----------------------------------------------------- %s\n", RED, RESET);
+            printf("%s --------------------------------------------------- %s\n", RED, RESET);
+            printf("%s| This option does not exist! Enter a valid option. |%s\n", RED, RESET);
+            printf("%s --------------------------------------------------- %s\n", RED, RESET);
             continue_the_game();
             print_menu();
             continue;
