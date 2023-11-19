@@ -6,6 +6,7 @@
 void print_rules()
 {
     print_header();
+
     printf("|                                                                          |\n");
     printf("|                              ---------------                             |\n");
     printf("|                             |     RULES     |                            |\n");
