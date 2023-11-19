@@ -18,11 +18,11 @@ void print_board()
             {
                 printf("%s%c%s", BLUE, board[i][j], RESET);
             }
-            else if (board[i][j] == 'X')
+            else if (i != 16 && board[i][j] == 'X')
             {
                 printf("%s%c%s", CYAN, board[i][j], RESET);
             }
-            else if (board[i][j] == 'O')
+            else if (i != 16 && board[i][j] == 'O')
             {
                 printf("%s%c%s", PURPLE, board[i][j], RESET);
             }
