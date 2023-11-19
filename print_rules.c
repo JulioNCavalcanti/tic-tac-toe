@@ -1,11 +1,10 @@
 #include <stdio.h>
 #include "print_header.h"
-#include "back.h"
+#include "return_to_menu.h"
 #include "print_menu.h"
 
 void print_rules()
 {
-
     print_header();
     printf("|                                                                          |\n");
     printf("|                              ---------------                             |\n");
@@ -46,7 +45,7 @@ void print_rules()
     printf("|                                                                          |\n");
     printf(" -------------------------------------------------------------------------- \n");
 
-    if (back())
+    if (return_to_menu())
     {
         print_menu();
     }
