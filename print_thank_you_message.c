@@ -4,6 +4,7 @@
 void print_thank_you_message()
 {
     print_header();
+
     printf("|                                                                          |\n");
     printf("|            --------------------------------------------------            |\n");
     printf("|           |     Thank you very much for playing my game!     |           |\n");
