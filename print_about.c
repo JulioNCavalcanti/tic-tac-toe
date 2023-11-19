@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include "print_header.h"
-#include "back.h"
+#include "return_to_menu.h"
 #include "print_menu.h"
 
 void print_about()
@@ -19,7 +19,7 @@ void print_about()
     printf("|                                                                          |\n");
     printf(" -------------------------------------------------------------------------- \n");
 
-    if (back())
+    if (return_to_menu())
     {
         print_menu();
     }
