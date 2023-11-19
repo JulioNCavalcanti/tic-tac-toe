@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include "print_header.h"
+#include "colors.h"
 
 void print_thank_you_message()
 {
@@ -7,8 +8,8 @@ void print_thank_you_message()
 
     printf("|                                                                          |\n");
     printf("|            --------------------------------------------------            |\n");
-    printf("|           |     Thank you very much for playing my game!     |           |\n");
-    printf("|           |                See you next time.                |           |\n");
+    printf("|           |     %sThank you very much for playing my game!%s     |           |\n", PURPLE, RESET);
+    printf("|           |                %sSee you next time.%s                |           |\n", PURPLE, RESET);
     printf("|            --------------------------------------------------            |\n");
     printf("|                                                                          |\n");
     printf(" --------------------------------------------------------------------------  \n");
