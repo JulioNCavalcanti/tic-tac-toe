@@ -1,10 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "clear_buffer.h"
+#include "continue_the_game.h"
+#include "print_menu.h"
 #include "start_the_game.h"
 #include "print_rules.h"
 #include "print_about.h"
 #include "print_thank_you_message.h"
+#include "colors.h"
 
 void captures_the_menu_selection()
 {
@@ -13,14 +16,22 @@ void captures_the_menu_selection()
     while (1)
     {
         printf("\n");
-        printf("Enter an option (1-4): ");
+        printf("%sEnter an option (1-4): %s", BLUE, RESET);
         scanf("%d", &choice);
         clear_buffer();
 
-        if (choice >= 1 && choice <= 4)
+        if (choice != 1 && choice != 2 && choice != 3 && choice != 4)
         {
-            break;
+            printf("\n");
+            printf("%s ----------------------------------------------------- %s\n", RED, RESET);
+            printf("%s| This option does not exist! Enter a valid position. |%s\n", RED, RESET);
+            printf("%s ----------------------------------------------------- %s\n", RED, RESET);
+            continue_the_game();
+            print_menu();
+            continue;
         }
+
+        break;
     }
 
     switch (choice)
