@@ -14,7 +14,7 @@ void captures_the_menu_selection()
     {
         printf("\n");
         printf("Enter an option (1-4): ");
-        scanf("%1d", &choice);
+        scanf("%d", &choice);
         clear_buffer();
 
         if (choice >= 1 && choice <= 4)
