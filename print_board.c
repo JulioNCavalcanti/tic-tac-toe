@@ -9,7 +9,7 @@ void print_board()
 
     char(*board)[76] = get_board();
 
-    for (int i = 0; i < 14; i++)
+    for (int i = 0; i < 18; i++)
     {
         for (int j = 0; j < 76; j++)
         {
@@ -26,9 +26,13 @@ void print_board()
             {
                 printf("%s%c%s", PURPLE, board[i][j], RESET);
             }
-            else if (board[i][j] == 'T' || board[i][j] == 'I' || board[i][j] == 'E')
+            else if ((i == 2) && (board[i][j] == 'T' || board[i][j] == 'I' || board[i][j] == 'E'))
             {
                 printf("%s%c%s", GREEN, board[i][j], RESET);
+            }
+            else if ((i == 14 && j > 1 && j < 13) || (i == 16 && j > 1 && j < 14))
+            {
+                printf("%s%c%s", PURPLE, board[i][j], RESET);
             }
             else
             {
