@@ -2,9 +2,10 @@
 #include <ctype.h>
 #include "print_board.h"
 #include "clear_buffer.h"
-#include "delay.h"
+#include "continue_the_game.h"
 #include "checks_if_the_position_is_empty.h"
 #include "get_board.h"
+#include "colors.h"
 
 void played_capture(char player)
 {
@@ -20,8 +21,8 @@ void played_capture(char player)
         while (1)
         {
             printf("\n");
-            printf("Enter the position in row-column format (e.g. 2B): ");
-            scanf("%d%c", &line, &column);
+            printf("%sEnter the position in row-column format (e.g. 2B): %s", BLUE, RESET);
+            scanf("%1d%c", &line, &column);
             clear_buffer();
 
             column = toupper(column);
@@ -29,10 +30,11 @@ void played_capture(char player)
             if ((line != 1 && line != 2 && line != 3) || (column != 'A' && column != 'B' && column != 'C'))
             {
                 printf("\n");
-                printf(" ------------------------------------------------------------------------- \n");
-                printf("| This position does not exist! Enter a valid position. Wait 3 seconds... |\n");
-                printf(" ------------------------------------------------------------------------- \n");
-                delay(3000);
+                printf("%s ------------------------------------------------------- %s\n", RED, RESET);
+                printf("%s| This position does not exist! Enter a valid position. |%s\n", RED, RESET);
+                printf("%s ------------------------------------------------------- %s\n", RED, RESET);
+                continue_the_game();
+                print_board();
                 continue;
             }
 
@@ -75,10 +77,11 @@ void played_capture(char player)
         else
         {
             printf("\n");
-            printf(" ---------------------------------------------------------------------- \n");
-            printf("| This position is occupied! Insert a free position. Wait 3 seconds... |\n");
-            printf(" ---------------------------------------------------------------------- \n");
-            delay(3000);
+            printf("%s ---------------------------------------------------- %s\n", RED, RESET);
+            printf("%s| This position is occupied! Insert a free position. |%s\n", RED, RESET);
+            printf("%s ---------------------------------------------------- %s\n", RED, RESET);
+            continue_the_game();
+            print_board();
             continue;
         }
     }
