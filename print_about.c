@@ -6,6 +6,7 @@
 void print_about()
 {
     print_header();
+    
     printf("|                                                                          |\n");
     printf("|                             -----------------                            |\n");
     printf("|                            |     CREDITS     |                           |\n");
