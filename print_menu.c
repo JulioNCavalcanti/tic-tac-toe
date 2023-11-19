@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include "print_header.h"
 #include "captures_the_menu_selection.h"
+#include "colors.h"
 
 void print_menu()
 {
@@ -8,12 +9,12 @@ void print_menu()
 
     printf("|                                                                          |\n");
     printf("|                              -------------                               |\n");
-    printf("|                             |     Menu    |                              |\n");
+    printf("|                             |     %sMenu%s    |                              |\n", BLUE, RESET);
     printf("|                              -------------                               |\n");
-    printf("|                             | 1 |  Play   |                              |\n");
-    printf("|                             | 2 |  Rules  |                              |\n");
-    printf("|                             | 3 |  About  |                              |\n");
-    printf("|                             | 4 |  Close  |                              |\n");
+    printf("|                             | %s1%s |  %sPlay %s  |                              |\n", PURPLE, RESET, PURPLE, RESET);
+    printf("|                             | %s2%s |  %sRules%s  |                              |\n", PURPLE, RESET, PURPLE, RESET);
+    printf("|                             | %s3%s |  %sAbout%s  |                              |\n", PURPLE, RESET, PURPLE, RESET);
+    printf("|                             | %s4%s |  %sClose%s  |                              |\n", PURPLE, RESET, PURPLE, RESET);
     printf("|                              -------------                               |\n");
     printf("|                                                                          |\n");
     printf(" -------------------------------------------------------------------------- \n");
