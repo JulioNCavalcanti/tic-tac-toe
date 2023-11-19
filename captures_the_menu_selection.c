@@ -30,7 +30,6 @@ void captures_the_menu_selection()
             print_menu();
             continue;
         }
-
         break;
     }
 
