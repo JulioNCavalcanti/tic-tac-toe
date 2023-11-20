@@ -1,11 +1,15 @@
+/*
+This function displays the final victory message
+*/
+
 #include <stdio.h>
-#include "get_board.h"
-#include "print_header.h"
-#include "colors.h"
+#include "get_the_board.h"
+#include "print_the_title.h"
+#include "colors_definitions.h"
 
 void prints_the_winner_of_the_game_or_if_the_game_was_a_tie()
 {
-    char(*board)[76] = get_board();
+    char(*board)[76] = get_the_board();
     char winner = '\0';
     const char *color;
 
@@ -23,7 +27,7 @@ void prints_the_winner_of_the_game_or_if_the_game_was_a_tie()
     {
         color = GREEN;
 
-        print_header();
+        print_the_title();
 
         printf("|                                                                          |\n");
         printf("|                              --------------                              |\n");
@@ -35,7 +39,7 @@ void prints_the_winner_of_the_game_or_if_the_game_was_a_tie()
         return;
     }
 
-    print_header();
+    print_the_title();
 
     printf("|                                                                          |\n");
     printf("|              ----------------------------------------------              |\n");
