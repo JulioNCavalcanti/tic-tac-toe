@@ -1,8 +1,12 @@
-#include "get_board.h"
+/*
+This function is used to update players' scores.
+*/
+
+#include "get_the_board.h"
 
 void update_player_scores(char player_icon)
 {
-    char(*board)[76] = get_board();
+    char(*board)[76] = get_the_board();
 
     if (player_icon == 'X')
     {
