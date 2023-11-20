@@ -1,5 +1,9 @@
+/*
+This function is used to print the match tie message .
+*/
+
 #include <stdio.h>
-#include "colors.h"
+#include "colors_definitions.h"
 
 void print_message_about_tie_in_match()
 {
