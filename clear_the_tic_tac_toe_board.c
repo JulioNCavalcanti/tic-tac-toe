@@ -1,9 +1,13 @@
-#include "get_board.h"
-#include "print_board.h"
+/*
+Essa função é usada para limpar a bandeja.
+*/
+
+#include "get_the_board.h"
+#include "print_the_board.h"
 
 void clear_the_tic_tac_toe_board()
 {
-    char(*board)[76] = get_board();
+    char(*board)[76] = get_the_board();
 
     for (int i = 7; i <= 11; i += 2)
     {
@@ -13,5 +17,5 @@ void clear_the_tic_tac_toe_board()
         }
     }
 
-    print_board();
+    print_the_board();
 }
