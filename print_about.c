@@ -1,12 +1,15 @@
+/*
+This function only serves to print information about the game developer
+*/
+
 #include <stdio.h>
-#include "print_header.h"
-#include "return_to_menu.h"
-#include "print_menu.h"
-#include "colors.h"
+#include "print_the_title.h"
+#include "back_to_menu.h"
+#include "colors_definitions.h"
 
 void print_about()
 {
-    print_header();
+    print_the_title();
 
     printf("|                                                                          |\n");
     printf("|                             -----------------                            |\n");
@@ -21,8 +24,5 @@ void print_about()
     printf("|                                                                          |\n");
     printf(" -------------------------------------------------------------------------- \n");
 
-    if (return_to_menu())
-    {
-        print_menu();
-    }
+    back_to_menu();
 }
