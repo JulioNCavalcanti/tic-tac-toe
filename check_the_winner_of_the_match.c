@@ -1,8 +1,13 @@
-#include "get_board.h"
+/*
+This function is used to check the winner of the match.
+
+It returns 1 if he is the winner, otherwise it returns 0.
+*/
+#include "get_the_board.h"
 
 int check_the_winner_of_the_match(char player)
 {
-    char(*board)[76] = get_board();
+    char(*board)[76] = get_the_board();
 
     if ( // Line
         (board[7][33] == player && board[7][37] == player && board[7][41] == player) ||
