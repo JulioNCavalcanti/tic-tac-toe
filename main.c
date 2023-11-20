@@ -1,8 +1,8 @@
-#include "print_menu.h"
+#include "print_the_menu.h"
 
 int main()
 {
-    print_menu();
+    print_the_menu();
 
     return 0;
 }
