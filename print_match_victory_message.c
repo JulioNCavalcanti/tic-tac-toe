@@ -1,5 +1,9 @@
+/*
+This function is used to print the match win message on the screen.
+*/
+
 #include <stdio.h>
-#include "colors.h"
+#include "colors_definitions.h"
 
 void print_match_victory_message(char player_icon)
 {
