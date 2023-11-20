@@ -4,6 +4,7 @@ This function only serves to display a thank you message before ending the game.
 
 #include <stdio.h>
 #include "print_the_title.h"
+#include "quit_the_game.h"
 #include "colors_definitions.h"
 
 void print_the_thank_you_message()
@@ -17,4 +18,6 @@ void print_the_thank_you_message()
     printf("|            --------------------------------------------------            |\n");
     printf("|                                                                          |\n");
     printf(" --------------------------------------------------------------------------  \n");
+
+    quit_the_game();
 }
