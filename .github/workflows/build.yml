@@ -19,8 +19,7 @@ jobs:
       run: |
         echo "Compiling C files from the repository root..."
         gcc *.c -o tictactoe -Wall -Wextra -std=c99
-        echo "Compilation finished.""
-
+        echo "Compilation finished."
     - name: List files in workspace root
       run: |
         echo "Files in workspace root after compilation:"
