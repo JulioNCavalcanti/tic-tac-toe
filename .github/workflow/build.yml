@@ -1,0 +1,32 @@
+name: Build TicTacToe for macOS
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: macos-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Compile C code
+      run: |
+        echo "Compiling C files from the repository root..."
+        gcc *.c -o tictactoe -Wall -Wextra -std=c99
+        echo "Compilation finished.
+
+    - name: List files in workspace root
+      run: |
+        echo "Files in workspace root after compilation:"
+        ls -l
+
+    - name: Upload TicTacToe executable
+      uses: actions/upload-artifact@v4
+      with:
+        name: tictactoe-macos 
+        path: tictactoe
